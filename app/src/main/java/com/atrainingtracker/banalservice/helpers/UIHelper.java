@@ -16,13 +16,13 @@ public class UIHelper {
                     case HRM:
                         return R.drawable.hr;
                     case ROWING_SPEED:
-                        return R.drawable.bike_spd;
+                        return R.drawable.row_spd;
                     case ROWING_CADENCE:
-                        return R.drawable.bike_cad;
+                        return R.drawable.row_cad;
                     case ROWING_SPEED_AND_CADENCE:
-                        return R.drawable.bike_speed_and_cadence;
+                        return R.drawable.row_speed_and_cadence;
                     case ROWING_POWER:
-                        return R.drawable.bike_pwr;
+                        return R.drawable.row_pwr;
                     case ENVIRONMENT:
                         return R.drawable.temp;
                 }
@@ -31,13 +31,13 @@ public class UIHelper {
                     case HRM:
                         return R.drawable.bt_hr;
                     case ROWING_SPEED:
-                        return R.drawable.bt_bike_spd;
+                        return R.drawable.bt_row_spd;
                     case ROWING_CADENCE:
-                        return R.drawable.bt_bike_cad;
+                        return R.drawable.bt_row_cad;
                     case ROWING_SPEED_AND_CADENCE:
-                        return R.drawable.bt_bike_speed_and_cadence;
+                        return R.drawable.bt_row_speed_and_cadence;
                     case ROWING_POWER:
-                        return R.drawable.bt_bike_pwr;
+                        return R.drawable.bt_row_pwr;
 
                 }
         }

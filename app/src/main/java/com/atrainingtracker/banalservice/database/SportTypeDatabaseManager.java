@@ -79,7 +79,7 @@ public class SportTypeDatabaseManager {
                 return R.drawable.bsport_run;
 
             case ROWING:
-                return R.drawable.bsport_bike;
+                return R.drawable.bsport_row;
 
             default:
                 return R.drawable.bsport_other;

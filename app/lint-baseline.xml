@@ -6893,38 +6893,38 @@
 
     <issue
         id="IconDuplicatesConfig"
-        message="The `bike_cad.png` icon has identical contents in the following configuration folders: drawable-hdpi, drawable">
+        message="The `row_cad.png` icon has identical contents in the following configuration folders: drawable-hdpi, drawable">
         <location
-            file="src\main\res\drawable\bike_cad.png"/>
+            file="src\main\res\drawable\row_cad.png"/>
         <location
-            file="src\main\res\drawable-hdpi\bike_cad.png"/>
+            file="src\main\res\drawable-hdpi\row_cad.png"/>
     </issue>
 
     <issue
         id="IconDuplicatesConfig"
-        message="The `bike_pwr.png` icon has identical contents in the following configuration folders: drawable-hdpi, drawable">
+        message="The `row_pwr.png` icon has identical contents in the following configuration folders: drawable-hdpi, drawable">
         <location
-            file="src\main\res\drawable\bike_pwr.png"/>
+            file="src\main\res\drawable\row_pwr.png"/>
         <location
-            file="src\main\res\drawable-hdpi\bike_pwr.png"/>
+            file="src\main\res\drawable-hdpi\row_pwr.png"/>
     </issue>
 
     <issue
         id="IconDuplicatesConfig"
-        message="The `bike_spd.png` icon has identical contents in the following configuration folders: drawable-hdpi, drawable">
+        message="The `row_spd.png` icon has identical contents in the following configuration folders: drawable-hdpi, drawable">
         <location
-            file="src\main\res\drawable\bike_spd.png"/>
+            file="src\main\res\drawable\row_spd.png"/>
         <location
-            file="src\main\res\drawable-hdpi\bike_spd.png"/>
+            file="src\main\res\drawable-hdpi\row_spd.png"/>
     </issue>
 
     <issue
         id="IconDuplicatesConfig"
-        message="The `bike_speed_and_cadence.png` icon has identical contents in the following configuration folders: drawable-hdpi, drawable">
+        message="The `row_speed_and_cadence.png` icon has identical contents in the following configuration folders: drawable-hdpi, drawable">
         <location
-            file="src\main\res\drawable\bike_speed_and_cadence.png"/>
+            file="src\main\res\drawable\row_speed_and_cadence.png"/>
         <location
-            file="src\main\res\drawable-hdpi\bike_speed_and_cadence.png"/>
+            file="src\main\res\drawable-hdpi\row_speed_and_cadence.png"/>
     </issue>
 
     <issue
@@ -7019,30 +7019,30 @@
 
     <issue
         id="IconLocation"
-        message="Found bitmap drawable `res/drawable/bike_cad.png` in densityless folder">
+        message="Found bitmap drawable `res/drawable/row_cad.png` in densityless folder">
         <location
-            file="src\main\res\drawable\bike_cad.png"/>
+            file="src\main\res\drawable\row_cad.png"/>
     </issue>
 
     <issue
         id="IconLocation"
-        message="Found bitmap drawable `res/drawable/bike_pwr.png` in densityless folder">
+        message="Found bitmap drawable `res/drawable/row_pwr.png` in densityless folder">
         <location
-            file="src\main\res\drawable\bike_pwr.png"/>
+            file="src\main\res\drawable\row_pwr.png"/>
     </issue>
 
     <issue
         id="IconLocation"
-        message="Found bitmap drawable `res/drawable/bike_spd.png` in densityless folder">
+        message="Found bitmap drawable `res/drawable/row_spd.png` in densityless folder">
         <location
-            file="src\main\res\drawable\bike_spd.png"/>
+            file="src\main\res\drawable\row_spd.png"/>
     </issue>
 
     <issue
         id="IconLocation"
-        message="Found bitmap drawable `res/drawable/bike_speed_and_cadence.png` in densityless folder">
+        message="Found bitmap drawable `res/drawable/row_speed_and_cadence.png` in densityless folder">
         <location
-            file="src\main\res\drawable\bike_speed_and_cadence.png"/>
+            file="src\main\res\drawable\row_speed_and_cadence.png"/>
     </issue>
 
     <issue
@@ -7210,7 +7210,7 @@
 
     <issue
         id="IconDensities"
-        message="Missing the following drawables in `drawable-xxhdpi`: ant_logo.png, bike_cad.png, bike_pwr.png, bike_spd.png, bike_speed_and_cadence.png, hr.png, logo.png, run_spd.png, temp.png">
+        message="Missing the following drawables in `drawable-xxhdpi`: ant_logo.png, row_cad.png, row_pwr.png, row_spd.png, row_speed_and_cadence.png, hr.png, logo.png, run_spd.png, temp.png">
         <location
             file="src\main\res\drawable-xxhdpi"/>
     </issue>

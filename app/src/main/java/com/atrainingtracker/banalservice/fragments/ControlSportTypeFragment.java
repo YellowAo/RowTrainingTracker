@@ -180,7 +180,7 @@ public class ControlSportTypeFragment extends Fragment {
 //                    mTvOther.setTextColor(ContextCompat.getColor(getActivity(), R.color.bright_grey));
 //
 //                    mIbRun.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_run));
-//                    mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_bike_gray));
+//                    mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_row_gray));
 //                    mIbOther.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_other_gray));
 //
 //                    break;
@@ -191,7 +191,7 @@ public class ControlSportTypeFragment extends Fragment {
                     mTvOther.setTextColor(ContextCompat.getColor(getActivity(), R.color.bright_grey));
 
                     //mIbRun.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_run_gray));
-                    mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_bike));
+                    mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_row));
                     mIbOther.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_other_gray));
 
                     break;
@@ -202,7 +202,7 @@ public class ControlSportTypeFragment extends Fragment {
                     mTvOther.setTextColor(ContextCompat.getColor(getActivity(), R.color.color_on_background));
 
                     //mIbRun.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_run_gray));
-                    mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_bike_gray));
+                    mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_row_gray));
                     mIbOther.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_other));
 
                     break;
@@ -213,7 +213,7 @@ public class ControlSportTypeFragment extends Fragment {
                     mTvOther.setTextColor(ContextCompat.getColor(getActivity(), R.color.bright_grey));
 
                     //mIbRun.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_run_gray));
-                    mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_bike_gray));
+                    mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_row_gray));
                     mIbOther.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_other_gray));
 
                     break;
@@ -224,7 +224,7 @@ public class ControlSportTypeFragment extends Fragment {
             mTvOther.setTextColor(ContextCompat.getColor(getActivity(), R.color.bright_grey));
 
             //mIbRun.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_run_gray));
-            mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_bike_gray));
+            mIbBike.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_row_gray));
             mIbOther.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bsport_other_gray));
         }
     }

@@ -32,7 +32,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/bike_cad"
+            android:src="@drawable/row_cad"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>

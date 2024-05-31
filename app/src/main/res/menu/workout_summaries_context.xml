@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ aTrainingTracker (ANT+ BTLE)
+  ~ Copyright (C) 2011 - 2019 Rainer Blind <rainer.blind@gmail.com>
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see https://www.gnu.org/licenses/gpl-3.0
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/jsonWrite"
+        android:title="@string/jsonWrite" />
+    <item
+        android:id="@+id/tcxWrite"
+        android:title="@string/tcxWrite" />
+    <item
+        android:id="@+id/gpxWrite"
+        android:title="@string/gpxWrite" />
+    <item
+        android:id="@+id/csvWrite"
+        android:title="@string/csvWrite" />
+    <item
+        android:id="@+id/stravaUpload"
+        android:title="@string/stravaUpload" />
+    <item
+        android:id="@+id/runkeeperUpload"
+        android:title="@string/runkeeperUpload" />
+    <item
+        android:id="@+id/trainingPeaksUpload"
+        android:title="@string/trainingPeaksUpload" />
+    <item
+        android:id="@+id/contextDelete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/delete_workout" />
+
+
+</menu>

@@ -1,0 +1,13 @@
+ANT Plus Plugins Sampler - Release Notes
+v3.8.0
+2019-12-3
+
+Copyright (c) Garmin Canada Inc. 2019
+All rights reserved.
+
+=============================================================
+1. LIBRARY VERSIONS
+
+FIT:                            21.18
+AntPluginLib:                   3.8.0
+AndroidX Legacy Support V4:     1.0.0

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ aTrainingTracker (ANT+ BTLE)
+  ~ Copyright (C) 2011 - 2019 Rainer Blind <rainer.blind@gmail.com>
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see https://www.gnu.org/licenses/gpl-3.0
+  -->
+
+<resources>
+
+    <string-array name="Strava_Sport_Types_Strava_Names">
+        <item>Workout</item>
+        <item>Ride</item>
+        <item>Run</item>
+        <item>Swim</item>
+        <item>Hike</item>
+        <item>Walk</item>
+        <item>Crossfit</item>
+        <item>Elliptical</item>
+        <item>EBikeRide</item>
+        <item>IceSkate</item>
+        <item>WeightTraining</item>
+        <item>InlineSkate</item>
+        <item>Kayaking</item>
+        <item>Canoeing</item>
+        <item>Kitesurf</item>
+        <item>RockClimbing</item>
+        <item>NordicSki</item>
+        <item>RollerSki</item>
+        <item>Rowing</item>
+        <item>Snowshoe</item>
+        <item>BackcountrySki</item>
+        <item>AlpineSki</item>
+        <item>Snowboard</item>
+        <item>StandUpPaddling</item>
+        <item>StairStepper</item>
+        <item>Surfing</item>
+        <item>VirtualRide</item>
+        <item>Windsurf</item>
+        <item>Yoga</item>
+    </string-array>
+
+    <string-array name="Strava_Sport_Types_UI_Names">
+        <item>Training (Other)</item>
+        <item>Radfahren</item>
+        <item>Laufen</item>
+        <item>Schwimmen</item>
+        <item>Wanderung</item>
+        <item>Spaziergang</item>
+        <item>Crossfit</item>
+        <item>Crosstrainer</item>
+        <item>E-Bike-Radfahrt</item>
+        <item>Eislaufen</item>
+        <item>Gewichtstraining</item>
+        <item>Inlineskaten</item>
+        <item>Kajakfahren</item>
+        <item>Kanufahren</item>
+        <item>Kitesurfen</item>
+        <item>Klettern</item>
+        <item>Nordischer Skilanglauf</item>
+        <item>Rollerski</item>
+        <item>Rudern</item>
+        <item>Schneeschuhwanderung</item>
+        <item>Skitouren</item>
+        <item>Ski Alpin</item>
+        <item>Snowboarden</item>
+        <item>Stand-up Paddeln</item>
+        <item>Stufen-Stepper</item>
+        <item>Surfen</item>
+        <item>Virtuelle Radfahrt</item>
+        <item>Windsurfen</item>
+        <item>Yoga</item>
+    </string-array>
+
+</resources>

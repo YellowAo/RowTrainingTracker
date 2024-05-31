@@ -331,7 +331,7 @@ public class BTLEBikePowerDevice extends MyBTLEDevice {
                         long timeDiff = wheelEventTime - mLastWheelEventTime;
                         if (DEBUG) Log.i(TAG, "revDiff=" + revDiff + ", timeDiff=" + timeDiff);
 
-                        double speed = mCalibrationFactor * revDiff * 2048 / timeDiff;   // Note that this value is differs from the one of the bike speed case
+                        double speed = mCalibrationFactor * revDiff * 2048 / timeDiff;   // Note that this value is differs from the one of the row speed case
                         if (DEBUG) Log.i(TAG, "got new speed: " + speed);
                         mSpeedSensor.newValue(speed);
                         if (revDiff != 0) {

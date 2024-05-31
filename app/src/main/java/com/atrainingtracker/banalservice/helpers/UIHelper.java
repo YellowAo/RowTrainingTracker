@@ -53,13 +53,13 @@ public class UIHelper {
 //		case HRM:
 //			return R.drawable.hr_large;
 //		case ROWING_SPEED:
-//			return R.drawable.bike_spd_large;
+//			return R.drawable.row_spd_large;
 //		case ROWING_CADENCE:
-//			return R.drawable.bike_cad_large;
+//			return R.drawable.row_cad_large;
 //		case ROWING_SPEED_AND_CADENCE:
-//			return R.drawable.bike_speed_and_cadence_large;
+//			return R.drawable.row_speed_and_cadence_large;
 //		case ROWING_POWER:
-//			return R.drawable.bike_pwr_large;
+//			return R.drawable.row_pwr_large;
 //		case RUN_SPEED:
 //			return R.drawable.run_spd_large;
 //		case ENVIRONMENT:
@@ -76,13 +76,13 @@ public class UIHelper {
             case ALTITUDE_FROM_PRESSURE:
                 return R.string.device_type_altitude_from_pressure;
             case ROWING_CADENCE:
-                return R.string.device_type_bike_cadence;
+                return R.string.device_type_row_cadence;
             case ROWING_POWER:
-                return R.string.device_type_bike_power;
+                return R.string.device_type_row_power;
             case ROWING_SPEED:
-                return R.string.device_type_bike_speed;
+                return R.string.device_type_row_speed;
             case ROWING_SPEED_AND_CADENCE:
-                return R.string.device_type_bike_speed_and_cadence;
+                return R.string.device_type_row_speed_and_cadence;
             case CLOCK:
                 return R.string.device_type_clock;
             case DUMMY:
@@ -108,13 +108,13 @@ public class UIHelper {
             case ALTITUDE_FROM_PRESSURE:
                 return R.string.device_type_short_altitude_from_pressure;
             case ROWING_CADENCE:
-                return R.string.device_type_short_bike_cadence;
+                return R.string.device_type_short_row_cadence;
             case ROWING_POWER:
-                return R.string.device_type_short_bike_power;
+                return R.string.device_type_short_row_power;
             case ROWING_SPEED:
-                return R.string.device_type_short_bike_speed;
+                return R.string.device_type_short_row_speed;
             case ROWING_SPEED_AND_CADENCE:
-                return R.string.device_type_short_bike_speed_and_cadence;
+                return R.string.device_type_short_row_speed_and_cadence;
             case CLOCK:
                 return R.string.device_type_short_clock;
             case DUMMY:

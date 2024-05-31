@@ -101,11 +101,11 @@ public abstract class MyANTAsyncSearchDevice {
         });
     }
 
-    protected void onNewBikeSpdCadCommonPccFound(AntPlusBikeSpdCadCommonPcc bikeSpdCadCommonPcc) {
+    protected void onNewBikeSpdCadCommonPccFound(AntPlusBikeSpdCadCommonPcc rowSpdCadCommonPcc) {
         // first of all, handle super class
-        onNewLegacyCommonPccFound(bikeSpdCadCommonPcc);
+        onNewLegacyCommonPccFound(rowSpdCadCommonPcc);
 
-        bikeSpdCadCommonPcc.subscribeBatteryStatusEvent(new AntPlusBikeSpdCadCommonPcc.IBatteryStatusReceiver() {
+        rowSpdCadCommonPcc.subscribeBatteryStatusEvent(new AntPlusBikeSpdCadCommonPcc.IBatteryStatusReceiver() {
 
             @Override
             public void onNewBatteryStatus(long estTimestamp, EnumSet<EventFlag> eventFlags, BigDecimal batteryVoltage, BatteryStatus batteryStatus) {

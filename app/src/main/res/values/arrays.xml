@@ -40,7 +40,7 @@
     <string-array name="Basic_Sport_Types">
         <item>@string/sport_type_other</item>
         <item>@string/sport_type_run</item>
-        <item>@string/sport_type_bike</item>
+        <item>@string/sport_type_row</item>
     </string-array>
     <string name="Basic_Sport_Types_values" translatable="false">
         <item>UNKNOWN</item>
@@ -173,7 +173,7 @@
         <item>walk</item>
         <item>run</item>
         <item>mtb</item>
-        <item>bike</item>
+        <item>row</item>
     </string-array>
 
 

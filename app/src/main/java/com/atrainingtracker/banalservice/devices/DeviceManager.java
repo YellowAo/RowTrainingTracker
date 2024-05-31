@@ -685,22 +685,22 @@ public class DeviceManager
                 break;
 
             case ROWING_SPEED:
-                if (DEBUG) Log.i(TAG, "create new bluetooth bike speed device");
+                if (DEBUG) Log.i(TAG, "create new bluetooth row speed device");
                 myBTLEDevice = new BTLEBikeSpeedDevice(mContext, mSensorManager, deviceID, address);
                 break;
 
             case ROWING_CADENCE:
-                if (DEBUG) Log.i(TAG, "create new bluetooth bike cadence device");
+                if (DEBUG) Log.i(TAG, "create new bluetooth row cadence device");
                 myBTLEDevice = new BTLEBikeCadenceDevice(mContext, mSensorManager, deviceID, address);
                 break;
 
             case ROWING_SPEED_AND_CADENCE:
-                if (DEBUG) Log.i(TAG, "create new bluetooth bike speed and cadence device");
+                if (DEBUG) Log.i(TAG, "create new bluetooth row speed and cadence device");
                 myBTLEDevice = new BTLEBikeSpeedAndCadenceDevice(mContext, mSensorManager, deviceID, address);
                 break;
 
             case ROWING_POWER:
-                if (DEBUG) Log.i(TAG, "create new bluetooth bike power device");
+                if (DEBUG) Log.i(TAG, "create new bluetooth row power device");
                 myBTLEDevice = new BTLEBikePowerDevice(mContext, mSensorManager, deviceID, address);
                 break;
 

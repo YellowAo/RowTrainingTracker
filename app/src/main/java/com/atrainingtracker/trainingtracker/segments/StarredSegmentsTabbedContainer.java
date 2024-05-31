@@ -126,7 +126,7 @@ public class StarredSegmentsTabbedContainer extends Fragment {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return getString(R.string.starred_bike_segments);
+                    return getString(R.string.starred_row_segments);
 
                 case 1:
                     return getString(R.string.starred_run_segments);

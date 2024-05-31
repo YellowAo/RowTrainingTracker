@@ -154,7 +154,7 @@ public class EditDeviceDialogFragment
         llWheelCircumference = mainDialog.findViewById(R.id.llWheelCircumference);
         llPowerSensors = mainDialog.findViewById(R.id.llBTPowerFeatures);
 
-        // optionally, configure the bike power view
+        // optionally, configure the row power view
         if (mDeviceType == DeviceType.ROWING_POWER) {
             mBikePowerSensorFlags = DevicesDatabaseManager.getBikePowerSensorFlags(mDeviceID);
 
@@ -171,7 +171,7 @@ public class EditDeviceDialogFragment
             // torque (almost power)
             if (BikePowerSensorsHelper.isTorqueDataSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__torque_data);
+                tv.setText(R.string.row_power__torque_data);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
@@ -179,24 +179,24 @@ public class EditDeviceDialogFragment
             // speed and distance
             if (BikePowerSensorsHelper.isWheelRevolutionDataSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__wheel_revolution_data);
+                tv.setText(R.string.row_power__wheel_revolution_data);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
 
             if (BikePowerSensorsHelper.isWheelSpeedDataSupported(mBikePowerSensorFlags) && BikePowerSensorsHelper.isWheelDistanceDataSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__wheel_speed_and_distance_data);
+                tv.setText(R.string.row_power__wheel_speed_and_distance_data);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             } else if (BikePowerSensorsHelper.isWheelSpeedDataSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__wheel_speed_data);
+                tv.setText(R.string.row_power__wheel_speed_data);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             } else if (BikePowerSensorsHelper.isWheelDistanceDataSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__wheel_distance_data);
+                tv.setText(R.string.row_power__wheel_distance_data);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
@@ -204,7 +204,7 @@ public class EditDeviceDialogFragment
             // cadence
             if (BikePowerSensorsHelper.isCrankRevolutionDataSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__crank_revolution_data);
+                tv.setText(R.string.row_power__crank_revolution_data);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
@@ -212,7 +212,7 @@ public class EditDeviceDialogFragment
             // balance (related to effectiveness)
             if (BikePowerSensorsHelper.isPowerBalanceSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__pedal_power_balance);
+                tv.setText(R.string.row_power__pedal_power_balance);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
 
@@ -231,7 +231,7 @@ public class EditDeviceDialogFragment
             if (BikePowerSensorsHelper.isExtremeMagnitudesSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
                 tv.setTextColor(getResources().getColor(R.color.bright_grey));
-                tv.setText(R.string.bike_power__extreme_magnitudes);
+                tv.setText(R.string.row_power__extreme_magnitudes);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
@@ -239,7 +239,7 @@ public class EditDeviceDialogFragment
             if (BikePowerSensorsHelper.isExtremeAnglesSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
                 tv.setTextColor(getResources().getColor(R.color.bright_grey));
-                tv.setText(R.string.bike_power__extreme_angles);
+                tv.setText(R.string.row_power__extreme_angles);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
@@ -247,21 +247,21 @@ public class EditDeviceDialogFragment
             if (BikePowerSensorsHelper.isDeadSpotAnglesSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
                 tv.setTextColor(getResources().getColor(R.color.bright_grey));
-                tv.setText(R.string.bike_power__top_and_bottom_dead_sport_angles);
+                tv.setText(R.string.row_power__top_and_bottom_dead_sport_angles);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
 
             if (BikePowerSensorsHelper.isPedalSmoothnessSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__pedal_smoothness);
+                tv.setText(R.string.row_power__pedal_smoothness);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
 
             if (BikePowerSensorsHelper.isTorqueEffectivenessSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
-                tv.setText(R.string.bike_power__torque_effectiveness);
+                tv.setText(R.string.row_power__torque_effectiveness);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
@@ -270,7 +270,7 @@ public class EditDeviceDialogFragment
             if (BikePowerSensorsHelper.isAccumulatedTorqueSupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
                 tv.setTextColor(getResources().getColor(R.color.bright_grey));
-                tv.setText(R.string.bike_power__accumulated_torque);
+                tv.setText(R.string.row_power__accumulated_torque);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
@@ -278,7 +278,7 @@ public class EditDeviceDialogFragment
             if (BikePowerSensorsHelper.isAccumulatedEnergySupported(mBikePowerSensorFlags)) {
                 TextView tv = new TextView(getContext());
                 tv.setTextColor(getResources().getColor(R.color.bright_grey));
-                tv.setText(R.string.bike_power__accumulated_energy);
+                tv.setText(R.string.row_power__accumulated_energy);
                 tv.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
                 llPowerSensors.addView(tv);
             }
@@ -459,17 +459,17 @@ public class EditDeviceDialogFragment
                 mCalibrationFactorTitle = getString(R.string.Wheel_Circumference);
                 mCalibrationFactorName = getString(R.string.wheel_circumference);
                 CIRCUMFERENCE_TEXT[0] = getString(R.string.wheel_circumference);
-                return R.layout.edit_device_bike_power;
+                return R.layout.edit_device_row_power;
 
             case ROWING_SPEED_AND_CADENCE:
             case ROWING_SPEED:
                 mCalibrationFactorTitle = getString(R.string.Wheel_Circumference);
                 mCalibrationFactorName = getString(R.string.wheel_circumference);
                 CIRCUMFERENCE_TEXT[0] = getString(R.string.wheel_circumference);
-                return R.layout.edit_device_bike;
+                return R.layout.edit_device_row;
 
             case ROWING_CADENCE:
-                return R.layout.edit_device_bike_cadence;
+                return R.layout.edit_device_row_cadence;
 
 
             default:

@@ -701,9 +701,9 @@ public class DevicesDatabaseManager {
         @Deprecated
         public static final String BT_FEATURE = "btFeature";
         // new in version 6
-        public static final String ROWING_POWER_SENSOR_FLAGS_TABLE = "bikePowerSensorFlagsTable";
+        public static final String ROWING_POWER_SENSOR_FLAGS_TABLE = "rowPowerSensorFlagsTable";
         public static final String DEVICE_ID = "deviceId";
-        public static final String ROWING_POWER_SENSOR_FLAGS = "bikePowerSensorFlags";
+        public static final String ROWING_POWER_SENSOR_FLAGS = "rowPowerSensorFlags";
         static final String DB_NAME = "Devices.db";
         // static final int DB_VERSION = 4;
         // static final int DB_VERSION = 5;    // upgraded at 30.12.2016 to support storing of BT features
@@ -864,7 +864,7 @@ public class DevicesDatabaseManager {
 
                 db.execSQL(CREATE_ROWING_POWER_SENSORS_TABLE_6);
 
-                // copy stuff form the old Bluetooth specific features table to the new bike power specific one...'
+                // copy stuff form the old Bluetooth specific features table to the new row power specific one...'
 
                 // get a cursor with all rows
                 Cursor cursor = db.query(TABLE_BT_SPECIFIC,

@@ -50,7 +50,7 @@ public class BTSearchForNewDevicesEngine
     boolean scanning = false;
     private IBTSearchForNewDevicesEngineInterface mCallbackInterface;
     // callback to get the manufacturer and battery percentage
-    // also check whether this is a bike speed, bike cadence, or combined speed and cadence device
+    // also check whether this is a row speed, row cadence, or combined speed and cadence device
     private final BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
         @Override
         public void onConnectionStateChange(final BluetoothGatt gatt, int status, int newState) {
@@ -105,7 +105,7 @@ public class BTSearchForNewDevicesEngine
 
                     btGattService = gatt.getService(BluetoothConstants.getServiceUUID(DeviceType.ROWING_POWER));
                     if (btGattService != null) {
-                        Log.i(TAG, "got bike power service, adding feature characteristic to read queue");
+                        Log.i(TAG, "got row power service, adding feature characteristic to read queue");
                         mReadCharacteristicQueue.get(address).add(btGattService.getCharacteristic(BluetoothConstants.UUID_CHARACTERISTIC_CYCLING_POWER_FEATURE));
                     }
 
@@ -292,7 +292,7 @@ public class BTSearchForNewDevicesEngine
             }
         }
         // queue is empty => everything is read => inform the callback that a device was found
-        // except for the case that it is a bike device.  In this case, we have to check the type
+        // except for the case that it is a row device.  In this case, we have to check the type
         else if (mDeviceType == DeviceType.ROWING_CADENCE || mDeviceType == DeviceType.ROWING_SPEED || mDeviceType == DeviceType.ROWING_SPEED_AND_CADENCE
                 || mDeviceType == DeviceType.ROWING_POWER) {
             // the device will be found somewhere else (when reading the csc feature)

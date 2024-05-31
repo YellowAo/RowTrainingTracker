@@ -31,7 +31,7 @@ public class ANTBikeSpeedAndCadenceDevice extends MyANTDevice {
     protected static final int CADENCE_THRESHOLD = 8;
     private static final String TAG = "ANTBikeSpeedAndCadenceDevice";
     private static final boolean DEBUG = BANALService.DEBUG & false;
-    protected AntPlusBikeSpeedDistancePcc bikeSpeedDistancePcc = null;
+    protected AntPlusBikeSpeedDistancePcc rowSpeedDistancePcc = null;
     protected AntPlusBikeCadencePcc cadencePcc = null;
     protected PccReleaseHandle pccReleaseHandle2 = null;
     protected MySensor<BigDecimal> mSpeedSensor;
@@ -92,7 +92,7 @@ public class ANTBikeSpeedAndCadenceDevice extends MyANTDevice {
     @Override
     protected void setSpecificPcc(AntPluginPcc antPluginPcc) {
         if (antPluginPcc.getClass() == AntPlusBikeSpeedDistancePcc.class) {
-            bikeSpeedDistancePcc = (AntPlusBikeSpeedDistancePcc) antPluginPcc;
+            rowSpeedDistancePcc = (AntPlusBikeSpeedDistancePcc) antPluginPcc;
 
             // also search for the cadence part
             // TODO is this the right place???
@@ -105,11 +105,11 @@ public class ANTBikeSpeedAndCadenceDevice extends MyANTDevice {
 
     @Override
     protected void subscribeSpecificEvents() {
-        if (bikeSpeedDistancePcc != null) {
+        if (rowSpeedDistancePcc != null) {
             // TODO: might be called a second time, when the cadencePcc is found.
             // is this a problem???
             myLog("before subscribeCalculatedSpeedEvent");
-            bikeSpeedDistancePcc.subscribeCalculatedSpeedEvent(new CalculatedSpeedReceiver(new BigDecimal(mCalibrationFactor)) {
+            rowSpeedDistancePcc.subscribeCalculatedSpeedEvent(new CalculatedSpeedReceiver(new BigDecimal(mCalibrationFactor)) {
 
                 @Override
                 public void onNewCalculatedSpeed(long estTimestamp, EnumSet<EventFlag> eventFlags, BigDecimal calculatedSpeed) {
@@ -119,7 +119,7 @@ public class ANTBikeSpeedAndCadenceDevice extends MyANTDevice {
             });
 
             myLog("before subscribeCalculatedAccumulatedDistanceEvent");
-            bikeSpeedDistancePcc.subscribeCalculatedAccumulatedDistanceEvent(new CalculatedAccumulatedDistanceReceiver(new BigDecimal(mCalibrationFactor)) {
+            rowSpeedDistancePcc.subscribeCalculatedAccumulatedDistanceEvent(new CalculatedAccumulatedDistanceReceiver(new BigDecimal(mCalibrationFactor)) {
 
                 @Override
                 public void onNewCalculatedAccumulatedDistance(long estTimestamp, EnumSet<EventFlag> eventFlags, BigDecimal calculatedAccumulatedDistance) {
@@ -148,7 +148,7 @@ public class ANTBikeSpeedAndCadenceDevice extends MyANTDevice {
     @Override
     protected void subscribeCommonEvents() {
         // according to an answer to my question in the ANT+ forum, this is not possible for this kind of device.
-        // onNewLegacyCommonPccFound(bikeSpeedDistancePcc);
+        // onNewLegacyCommonPccFound(rowSpeedDistancePcc);
     }
 
 
@@ -159,10 +159,10 @@ public class ANTBikeSpeedAndCadenceDevice extends MyANTDevice {
 //    	
 //    	myLog("AntPluginPcc class name: " + antPluginPcc.getClass().getName());
 //    	if (antPluginPcc.getClass() == AntPlusBikeSpeedDistancePcc.class) {        	
-//    		bikeSpeedDistancePcc = (AntPlusBikeSpeedDistancePcc) antPluginPcc;
+//    		rowSpeedDistancePcc = (AntPlusBikeSpeedDistancePcc) antPluginPcc;
 //
 //    		myLog("before subscribeCalculatedSpeedEvent");
-//    		bikeSpeedDistancePcc.subscribeCalculatedSpeedEvent(new CalculatedSpeedReceiver(mCalibrationFactor)
+//    		rowSpeedDistancePcc.subscribeCalculatedSpeedEvent(new CalculatedSpeedReceiver(mCalibrationFactor)
 //    		{
 //
 //    			@Override
@@ -174,7 +174,7 @@ public class ANTBikeSpeedAndCadenceDevice extends MyANTDevice {
 //    		});
 //
 //    		myLog("before subscribeCalculatedAccumulatedDistanceEvent");
-//    		bikeSpeedDistancePcc.subscribeCalculatedAccumulatedDistanceEvent(new CalculatedAccumulatedDistanceReceiver(mCalibrationFactor)
+//    		rowSpeedDistancePcc.subscribeCalculatedAccumulatedDistanceEvent(new CalculatedAccumulatedDistanceReceiver(mCalibrationFactor)
 //    		{
 //
 //    			@Override
@@ -207,7 +207,7 @@ public class ANTBikeSpeedAndCadenceDevice extends MyANTDevice {
 //
 //    	// finally, subscribe to legacy common Pcc stuff
 //    	// according to an answer to my question in the ANT+ forum, this is not possible for this kind of device.
-//    	// onNewLegacyCommonPccFound(bikeSpeedDistancePcc); 
+//    	// onNewLegacyCommonPccFound(rowSpeedDistancePcc);
 //    }
 
 }

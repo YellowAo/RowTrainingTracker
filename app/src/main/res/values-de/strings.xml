@@ -103,7 +103,7 @@
 
     <string name="commute">Pendeln</string>
     <string name="trainer_general">Indoor Trainer</string>
-    <string name="trainer_bike">Rolle</string>
+    <string name="trainer_row">Rolle</string>
     <string name="trainer_run">Laufband</string>
 
     <string name="guess_commute_and_trainer">Rate pendeln und indoor trainer</string>
@@ -133,18 +133,18 @@
     <string name="configure_pebble_view">Pebble Anzeige anpassen: %1$s</string>
 
     <!--  ActivityType -->
-    <string name="activity_type_bike_power">Rad Leistung</string>
-    <string name="activity_type_bike_speed_and_cadence">Rad Geschw. und Freq.</string>
-    <string name="activity_type_bike_speed">Rad Geschwindigkeit</string>
+    <string name="activity_type_row_power">Rad Leistung</string>
+    <string name="activity_type_row_speed_and_cadence">Rad Geschw. und Freq.</string>
+    <string name="activity_type_row_speed">Rad Geschwindigkeit</string>
     <string name="activity_type_multisport_with_hr">Multisport mit HR</string>
     <string name="activity_type_multisport">Multisport</string>
     <string name="activity_type_run_speed_and_cadence">Lauf Geschw. und Freq.</string>
     <string name="activity_type_run_speed">Lauf Geschwindigkeit</string>
 
     <!-- Short version of ActivityType, at most 14 letters -->
-    <string name="activity_type_short_bike_power">Rad Leistung</string>
-    <string name="activity_type_short_bike_speed_and_cadence">Rad Spd &amp; Cad</string>
-    <string name="activity_type_short_bike_speed">Rad Geschw.</string>
+    <string name="activity_type_short_row_power">Rad Leistung</string>
+    <string name="activity_type_short_row_speed_and_cadence">Rad Spd &amp; Cad</string>
+    <string name="activity_type_short_row_speed">Rad Geschw.</string>
     <string name="activity_type_short_multisport_with_hr">Multisport HR</string>
     <string name="activity_type_short_multisport">Multisport</string>
     <string name="activity_type_short_run_speed_and_cadence">Lauf Spd &amp; Cad</string>
@@ -158,14 +158,14 @@
     <string name="device_type_short_dummy">Dummy</string>
     <string name="device_type_all">Alle</string>
     <string name="device_type_short_all">Alle</string>
-    <string name="device_type_bike_cadence">Trittfrequenz</string>
-    <string name="device_type_short_bike_cadence">Freq.</string>
-    <string name="device_type_bike_power">Rad Leistung</string>
-    <string name="device_type_short_bike_power">pwr</string>
-    <string name="device_type_bike_speed_and_cadence">Rad Geschw. &amp; Freq.</string>
-    <string name="device_type_short_bike_speed_and_cadence">s&amp;c</string>
-    <string name="device_type_bike_speed">Rad Geschwindigkeit</string>
-    <string name="device_type_short_bike_speed">spd</string>
+    <string name="device_type_row_cadence">Trittfrequenz</string>
+    <string name="device_type_short_row_cadence">Freq.</string>
+    <string name="device_type_row_power">Rad Leistung</string>
+    <string name="device_type_short_row_power">pwr</string>
+    <string name="device_type_row_speed_and_cadence">Rad Geschw. &amp; Freq.</string>
+    <string name="device_type_short_row_speed_and_cadence">s&amp;c</string>
+    <string name="device_type_row_speed">Rad Geschwindigkeit</string>
+    <string name="device_type_short_row_speed">spd</string>
     <string name="device_type_heart_rate">Herzfrequenz</string>
     <string name="device_type_short_heart_rate">HR</string>
     <string name="device_type_run_speed">Lauf Geschwindigkeit</string>
@@ -197,8 +197,8 @@
     <string name="cadence_short">Freq.</string>
     <string name="cadence_run">Schrittfrequenz</string>
     <string name="cadence_run_short">Schrittfreq.</string>
-    <string name="cadence_bike">Trittfrequenz</string>
-    <string name="cadence_bike_short">Trittfreq.</string>
+    <string name="cadence_row">Trittfrequenz</string>
+    <string name="cadence_row_short">Trittfreq.</string>
     <string name="calories">Kalorien</string>
     <string name="calories_short">cal.</string>
     <string name="distance">Distanz</string>
@@ -257,31 +257,31 @@
     <string name="sport_type_walk">Spaziergang</string>
     <string name="sport_type_run">Laufen</string>
     <string name="sport_type_MTB">MTB</string>
-    <string name="sport_type_bike">Radeln</string>
+    <string name="sport_type_row">Radeln</string>
     <string name="sport_type_other">Andere</string>
 
     <!-- <string name="ready_to_train">ready to %1$s</string> -->
     <!-- <string name="rock">rock</string> -->
-    <!-- <string name="bike">bike</string> -->
+    <!-- <string name="row">row</string> -->
     <!-- <string name="run">run</string>   -->
 
     <!-- Bike Power Features -->
     <string name="featuresText">Enthaltene Sensoren</string>
-    <string name="bike_power__instantaneous_power">&#8226; Aktuelle Leistung</string>
-    <string name="bike_power__pedal_power_balance">&#8226; Pedal Power Balance</string>
-    <string name="bike_power__accumulated_torque">&#8226; Summierte Kraft</string>
-    <string name="bike_power__wheel_revolution_data">&#8226; Geschwindigkeit &amp; Entfernung</string>
-    <string name="bike_power__crank_revolution_data">&#8226; Trittfrequenz</string>
-    <string name="bike_power__extreme_magnitudes">&#8226; Extreme Magnitudes</string>
-    <string name="bike_power__extreme_angles">&#8226; Exteme Angles</string>
-    <string name="bike_power__top_and_bottom_dead_sport_angles">&#8226; Oberer und unterer Winkel ohne Kraft</string>
-    <string name="bike_power__accumulated_energy">&#8226; Summierte Energie</string>
-    <string name="bike_power__wheel_speed_and_distance_data">&#8226; Geschwindigkeit &amp; Entfernung</string>
-    <string name="bike_power__wheel_speed_data">&#8226; Geschwindigkeit</string>
-    <string name="bike_power__wheel_distance_data">&#8226; Entfernung</string>
-    <string name="bike_power__pedal_smoothness">&#8226; Glattheit</string>
-    <string name="bike_power__torque_effectiveness">&#8226; Effizienz</string>
-    <string name="bike_power__torque_data">&#8226; Kraft</string>
+    <string name="row_power__instantaneous_power">&#8226; Aktuelle Leistung</string>
+    <string name="row_power__pedal_power_balance">&#8226; Pedal Power Balance</string>
+    <string name="row_power__accumulated_torque">&#8226; Summierte Kraft</string>
+    <string name="row_power__wheel_revolution_data">&#8226; Geschwindigkeit &amp; Entfernung</string>
+    <string name="row_power__crank_revolution_data">&#8226; Trittfrequenz</string>
+    <string name="row_power__extreme_magnitudes">&#8226; Extreme Magnitudes</string>
+    <string name="row_power__extreme_angles">&#8226; Exteme Angles</string>
+    <string name="row_power__top_and_bottom_dead_sport_angles">&#8226; Oberer und unterer Winkel ohne Kraft</string>
+    <string name="row_power__accumulated_energy">&#8226; Summierte Energie</string>
+    <string name="row_power__wheel_speed_and_distance_data">&#8226; Geschwindigkeit &amp; Entfernung</string>
+    <string name="row_power__wheel_speed_data">&#8226; Geschwindigkeit</string>
+    <string name="row_power__wheel_distance_data">&#8226; Entfernung</string>
+    <string name="row_power__pedal_smoothness">&#8226; Glattheit</string>
+    <string name="row_power__torque_effectiveness">&#8226; Effizienz</string>
+    <string name="row_power__torque_data">&#8226; Kraft</string>
 
     <string name="pedalPowerBalanceCorrection">Korrektur für Power Balance</string>
     <string name="doublePowerBalanceValues">Verdopple die gemessenen Werte</string>
@@ -381,10 +381,10 @@
 
     <string name="getting_equipment_from_strava">Aktualisiere Strava Ausrüstung…\nbitte warten</string>
     <string name="got_shoe">Aktualisiere Schuhe\nSchuh: %1$s</string>
-    <string name="got_bike">Aktualisiere Fahrräder\nRad: %1$s</string>
+    <string name="got_row">Aktualisiere Fahrräder\nRad: %1$s</string>
     <string name="strava_success_but_must_check">zu Strava hochgeladen, überprüfe die Rückmeldung …</string>
     <string name="strava_success_waiting_for_result">zu Strava hochgeladen, warte auf Rückmeldung …</string>
-    <!-- <string name="checking_bike">getting bikes from Strava\nchecking bike: %1$s</string> -->
+    <!-- <string name="checking_row">getting rows from Strava\nchecking row: %1$s</string> -->
 
     <string name="choose_view">Ansicht wählen</string>
     <string name="choose_activity_type">Aktivitätstyp wählen</string>
@@ -454,11 +454,11 @@
     <!--     <string name="textEquipment">Equipment</string> -->
     <!--     <string name="textEditDeviceOk">OK</string> -->
 
-    <!-- edit_device_bike_cadence -->
+    <!-- edit_device_row_cadence -->
     <string name="editDeviceBikeCadenceDeviceNameValue">Garmin Frequenz</string>
     <string name="editDeviceBikeCadenceDeviceTypeValue">Frequenz</string>
 
-    <!-- edit_device_bike -->
+    <!-- edit_device_row -->
     <string name="editDeviceBikeDeviceNameValue">Garmin Geschwindigkeit</string>
     <string name="editDeviceBikeDeviceTypeValue">Rad Geschwindigkeit</string>
     <string name="editDeviceBikeEditCalibrationFactorBasedOnDistance">Radumfang berechnen</string>
@@ -516,9 +516,9 @@
 
     <!-- others -->
     <string name="equipment_all">Alle</string>
-    <string name="equipment_all_bikes">Alle Räder</string>
+    <string name="equipment_all_rows">Alle Räder</string>
     <string name="equipment_all_shoes">Alle Schuhe</string>
-    <string name="equipment_type_bike">Rad</string>
+    <string name="equipment_type_row">Rad</string>
     <string name="equipment_type_shoe">Schuh</string>
 
     <!-- dialogs -->
@@ -602,13 +602,13 @@
     <string name="paused">Pause vom</string>
     <string name="some_remote_device">Externer Sensor</string>
     <string name="ready_run">Laufen</string>
-    <string name="ready_bike">Radfahren</string>
+    <string name="ready_row">Radfahren</string>
     <string name="ready_other">Trainieren</string>
     <string name="tracking_run">Laufen</string>
-    <string name="tracking_bike">Radfahren</string>
+    <string name="tracking_row">Radfahren</string>
     <string name="tracking_other">Trainieren</string>
     <string name="paused_run">Laufen</string>
-    <string name="paused_bike">Radfahren</string>
+    <string name="paused_row">Radfahren</string>
     <string name="paused_other">Trainieren</string>
     <string name="export_status">Exportstatus</string>
     <string name="available_devices">Sichtbare Sensoren</string>
@@ -647,7 +647,7 @@
     <string name="workout_name_scheme">Benennung der Einheiten</string>
     <string name="workout_name_schemes">Benennung der Einheiten</string>
     <string name="starred_run_segments">Laufen</string>
-    <string name="starred_bike_segments">Radeln</string>
+    <string name="starred_row_segments">Radeln</string>
     <string name="segments">Segmente</string>
     <string name="segment_leaderboard">Bestenliste</string>
 

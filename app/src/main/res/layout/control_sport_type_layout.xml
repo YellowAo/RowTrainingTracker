@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/sport_type_bike"
+            android:text="@string/sport_type_row"
             android:textColor="@color/my_black"
             android:textSize="15sp" />
     </LinearLayout>

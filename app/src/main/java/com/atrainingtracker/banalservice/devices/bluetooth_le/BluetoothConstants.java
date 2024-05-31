@@ -39,8 +39,8 @@ public class BluetoothConstants {
     static {
         SERVICE_UUIDS.put(DeviceType.HRM, UUID.fromString(SERVICE_HEART_RATE));
         SERVICE_UUIDS.put(DeviceType.ROWING_SPEED_AND_CADENCE, UUID.fromString(SERVICE_CYCLING_SPEED_AND_CADENCE));
-        SERVICE_UUIDS.put(DeviceType.ROWING_SPEED, UUID.fromString(SERVICE_CYCLING_SPEED_AND_CADENCE));   // in BT_LE, a bike speed sensor is essentially a combined sensor without cadence
-        SERVICE_UUIDS.put(DeviceType.ROWING_CADENCE, UUID.fromString(SERVICE_CYCLING_SPEED_AND_CADENCE));   // in BT_LE, a bike cadence sensor is essentially a combined sensor without speed
+        SERVICE_UUIDS.put(DeviceType.ROWING_SPEED, UUID.fromString(SERVICE_CYCLING_SPEED_AND_CADENCE));   // in BT_LE, a row speed sensor is essentially a combined sensor without cadence
+        SERVICE_UUIDS.put(DeviceType.ROWING_CADENCE, UUID.fromString(SERVICE_CYCLING_SPEED_AND_CADENCE));   // in BT_LE, a row cadence sensor is essentially a combined sensor without speed
         SERVICE_UUIDS.put(DeviceType.ROWING_POWER, UUID.fromString(SERVICE_CYCLING_POWER));
 
         CHARACTERISTIC_MEASUREMENT_UUIDS.put(DeviceType.HRM, UUID.fromString(CHARACTERISTIC_HEART_RATE_MEASUREMENT));

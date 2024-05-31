@@ -470,7 +470,7 @@ public class Activity_BikeCadenceSampler extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bike_cadence);
+        setContentView(R.layout.activity_row_cadence);
 
         tv_status = (TextView)findViewById(R.id.textView_Status);
 

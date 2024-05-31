@@ -117,8 +117,8 @@ public class Activity_FitnessEquipmentSampler extends Activity
     TextView tv_ellipticalStrides;
     TextView tv_ellipticalCadence;
     TextView tv_ellipticalPower;
-    TextView tv_bikeCadence;
-    TextView tv_bikePower;
+    TextView tv_rowCadence;
+    TextView tv_rowPower;
     TextView tv_rowerStrokes;
     TextView tv_rowerCadence;
     TextView tv_rowerPower;
@@ -243,8 +243,8 @@ public class Activity_FitnessEquipmentSampler extends Activity
         tv_ellipticalStrides = (TextView) findViewById(R.id.textView_EllipticalStrides);
         tv_ellipticalCadence = (TextView) findViewById(R.id.textView_EllipticalCadence);
         tv_ellipticalPower = (TextView) findViewById(R.id.textView_EllipticalPower);
-        tv_bikeCadence = (TextView) findViewById(R.id.textView_BikeCadence);
-        tv_bikePower = (TextView) findViewById(R.id.textView_BikePower);
+        tv_rowCadence = (TextView) findViewById(R.id.textView_BikeCadence);
+        tv_rowPower = (TextView) findViewById(R.id.textView_BikePower);
         tv_rowerStrokes = (TextView) findViewById(R.id.textView_RowerStrokes);
         tv_rowerCadence = (TextView) findViewById(R.id.textView_RowerCadence);
         tv_rowerPower = (TextView) findViewById(R.id.textView_RowerPower);
@@ -447,7 +447,7 @@ public class Activity_FitnessEquipmentSampler extends Activity
             public void onClick(View v)
             {
                 UserConfiguration config = new UserConfiguration();
-                config.bicycleWeight = new BigDecimal("10.00");         //10kg bike weight
+                config.bicycleWeight = new BigDecimal("10.00");         //10kg row weight
                 config.gearRatio = new BigDecimal("0.03");              //0.03 gear ratio
                 config.bicycleWheelDiameter = new BigDecimal("0.70");   //0.70m wheel diameter
                 config.userWeight = new BigDecimal("75.00");            //75kg user
@@ -662,8 +662,8 @@ public class Activity_FitnessEquipmentSampler extends Activity
         tv_ellipticalStrides.setText("---");
         tv_ellipticalCadence.setText("---");
         tv_ellipticalPower.setText("---");
-        tv_bikeCadence.setText("---");
-        tv_bikePower.setText("---");
+        tv_rowCadence.setText("---");
+        tv_rowPower.setText("---");
         tv_rowerStrokes.setText("---");
         tv_rowerCadence.setText("---");
         tv_rowerPower.setText("---");
@@ -1120,13 +1120,13 @@ public class Activity_FitnessEquipmentSampler extends Activity
                                                 tv_estTimestamp.setText(String.valueOf(estTimestamp));
 
                                                 if(instantaneousCadence == -1)
-                                                    tv_bikeCadence.setText("Invalid");
+                                                    tv_rowCadence.setText("Invalid");
                                                 else
-                                                    tv_bikeCadence.setText(String.valueOf(instantaneousCadence) + "rpm");
+                                                    tv_rowCadence.setText(String.valueOf(instantaneousCadence) + "rpm");
                                                 if(instantaneousPower == -1)
-                                                    tv_bikePower.setText("Invalid");
+                                                    tv_rowPower.setText("Invalid");
                                                 else
-                                                    tv_bikePower.setText(String.valueOf(instantaneousPower) + "W");
+                                                    tv_rowPower.setText(String.valueOf(instantaneousPower) + "W");
                                             }
                                         });
 

@@ -497,7 +497,7 @@ public class Activity_BikeSpeedDistanceSampler extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bike_speeddistance);
+        setContentView(R.layout.activity_row_speeddistance);
 
         tv_status = (TextView)findViewById(R.id.textView_Status);
 

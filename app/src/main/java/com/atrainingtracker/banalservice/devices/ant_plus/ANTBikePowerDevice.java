@@ -56,7 +56,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
     protected MySensor<Integer> mTorqueEffectivenessRightSensor;
     protected MySensor<Integer> mTorqueEffectivenessLeftSensor;
     protected boolean mInvertPowerBalanceValues;
-    AntPlusBikePowerPcc bikePowerPcc = null;
+    AntPlusBikePowerPcc rowPowerPcc = null;
     private String TAG = "ANTBikePowerDevice";
 
     /**
@@ -93,7 +93,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
 
     @Override
     protected void setSpecificPcc(AntPluginPcc antPluginPcc) {
-        bikePowerPcc = (AntPlusBikePowerPcc) antPluginPcc;
+        rowPowerPcc = (AntPlusBikePowerPcc) antPluginPcc;
     }
 
     private void createCadenceSensor() {
@@ -199,9 +199,9 @@ public class ANTBikePowerDevice extends MyANTDevice {
 
     @Override
     protected void subscribeSpecificEvents() {
-        if (bikePowerPcc != null) {
+        if (rowPowerPcc != null) {
 
-            bikePowerPcc.subscribeCalculatedPowerEvent(new ICalculatedPowerReceiver() {
+            rowPowerPcc.subscribeCalculatedPowerEvent(new ICalculatedPowerReceiver() {
 
                 @Override
                 public void onNewCalculatedPower(long estTimestamp, EnumSet<EventFlag> eventFlags, AntPlusBikePowerPcc.DataSource dataSource, BigDecimal calculatedPower) {
@@ -211,7 +211,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
 
 
             // cadence stuff
-            bikePowerPcc.subscribeCalculatedCrankCadenceEvent(new ICalculatedCrankCadenceReceiver() {
+            rowPowerPcc.subscribeCalculatedCrankCadenceEvent(new ICalculatedCrankCadenceReceiver() {
 
                 @Override
                 public void onNewCalculatedCrankCadence(long estTimestamp, EnumSet<EventFlag> eventFlags, DataSource dataSource, BigDecimal calculatedCrankCadence) {
@@ -225,7 +225,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
                 }
             });
 
-            bikePowerPcc.subscribeInstantaneousCadenceEvent(new IInstantaneousCadenceReceiver() {
+            rowPowerPcc.subscribeInstantaneousCadenceEvent(new IInstantaneousCadenceReceiver() {
 
                 @Override
                 public void onNewInstantaneousCadence(long estTimestamp, java.util.EnumSet<EventFlag> eventFlags, AntPlusBikePowerPcc.DataSource dataSource, int instantaneousCadence) {
@@ -246,7 +246,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
 
             });
 
-            bikePowerPcc.subscribeCalculatedTorqueEvent(new ICalculatedTorqueReceiver() {
+            rowPowerPcc.subscribeCalculatedTorqueEvent(new ICalculatedTorqueReceiver() {
 
                 @Override
                 public void onNewCalculatedTorque(long estTimestamp, EnumSet<EventFlag> eventFlags, AntPlusBikePowerPcc.DataSource dataSource, BigDecimal calculatedTorque) {
@@ -258,7 +258,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
                 }
             });
 
-            bikePowerPcc.subscribeCalculatedWheelDistanceEvent(new CalculatedWheelDistanceReceiver(new BigDecimal(mCalibrationFactor)) {
+            rowPowerPcc.subscribeCalculatedWheelDistanceEvent(new CalculatedWheelDistanceReceiver(new BigDecimal(mCalibrationFactor)) {
 
                 @Override
                 public void onNewCalculatedWheelDistance(long estTimestamp, EnumSet<EventFlag> eventFlags, AntPlusBikePowerPcc.DataSource dataSource, BigDecimal calculatedWheelDistance) {
@@ -278,7 +278,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
 
             if (DEBUG)
                 Log.i(TAG, "subscribing calculatedWheelSpeed with calibrationFactor=" + mCalibrationFactor);
-            bikePowerPcc.subscribeCalculatedWheelSpeedEvent(new CalculatedWheelSpeedReceiver(new BigDecimal(mCalibrationFactor)) {
+            rowPowerPcc.subscribeCalculatedWheelSpeedEvent(new CalculatedWheelSpeedReceiver(new BigDecimal(mCalibrationFactor)) {
 
                 @Override
                 public void onNewCalculatedWheelSpeed(long estTimestamp, EnumSet<EventFlag> eventFlags, AntPlusBikePowerPcc.DataSource dataSource, BigDecimal calculatedWheelSpeed) {
@@ -297,7 +297,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
                 }
             });
 
-            bikePowerPcc.subscribePedalPowerBalanceEvent(new IPedalPowerBalanceReceiver() {
+            rowPowerPcc.subscribePedalPowerBalanceEvent(new IPedalPowerBalanceReceiver() {
                 @Override
                 public void onNewPedalPowerBalance(long estTimestamp, java.util.EnumSet<EventFlag> eventFlags, boolean rightPedalIndicator, int pedalPowerPercentage) {
                     if (mPowerBalanceSensor == null
@@ -319,7 +319,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
                 }
             });
 
-            bikePowerPcc.subscribePedalSmoothnessEvent(new IPedalSmoothnessReceiver() {
+            rowPowerPcc.subscribePedalSmoothnessEvent(new IPedalSmoothnessReceiver() {
                 @Override
                 public void onNewPedalSmoothness(long estTimestamp, java.util.EnumSet<EventFlag> eventFlags, long powerOnlyUpdateEventCount, boolean separatePedalSmoothnessSupport, java.math.BigDecimal leftOrCombinedPedalSmoothness, java.math.BigDecimal rightPedalSmoothness) {
                     if (separatePedalSmoothnessSupport) {
@@ -349,7 +349,7 @@ public class ANTBikePowerDevice extends MyANTDevice {
                 }
             });
 
-            bikePowerPcc.subscribeTorqueEffectivenessEvent(new ITorqueEffectivenessReceiver() {
+            rowPowerPcc.subscribeTorqueEffectivenessEvent(new ITorqueEffectivenessReceiver() {
 
                 @Override
                 public void onNewTorqueEffectiveness(long estTimestamp,
@@ -376,6 +376,6 @@ public class ANTBikePowerDevice extends MyANTDevice {
 
     @Override
     protected void subscribeCommonEvents() {
-        onNewCommonPccFound(bikePowerPcc);
+        onNewCommonPccFound(rowPowerPcc);
     }
 }

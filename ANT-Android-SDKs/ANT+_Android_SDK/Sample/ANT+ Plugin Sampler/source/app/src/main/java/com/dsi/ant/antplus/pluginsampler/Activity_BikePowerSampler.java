@@ -1083,7 +1083,7 @@ public class Activity_BikePowerSampler extends Activity
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bike_power);
+        setContentView(R.layout.activity_row_power);
 
         textView_status = (TextView)findViewById(R.id.textView_Status);
         textView_EstTimestamp = (TextView)findViewById(R.id.textView_EstTimestamp);

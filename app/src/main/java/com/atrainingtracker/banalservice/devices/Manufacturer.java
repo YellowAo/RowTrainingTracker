@@ -74,7 +74,7 @@ public class Manufacturer {
             "Mio Technology (MiTAC Global Corporation)",   // 59
             "ROTOR",                     // 60
             "Geonaute",                  // 61
-            "IDbike",                    // 62
+            "IDrow",                    // 62
             "Specialized",               // 63
             "WTEK",                      // 64
             "Physi-Cal Enterprises Inc. (MIO Global)",     // 65
@@ -85,7 +85,7 @@ public class Manufacturer {
             "Sigma Sport",               // 70
             "TomTom",                    // 71
             "PeriPedal",                 // 72
-            "Wattbike",                  // 73
+            "Wattrow",                  // 73
             "Unknown",                   // 74 there seems to be no entry
             "Unknown",                   // 75 there seems to be no entry
             "Moxy Monitor",              // 76

@@ -35,7 +35,7 @@ public class ANTBikeSpeedDevice extends MyANTDevice {
     // protected int mRevolutionCount;
 
     // protected int mAccumulatedRevolutionCount;
-    protected AntPlusBikeSpeedDistancePcc bikeSpeedDistancePcc = null;
+    protected AntPlusBikeSpeedDistancePcc rowSpeedDistancePcc = null;
     protected MySensor<BigDecimal> mSpeedSensor;
     protected MySensor<Double> mPaceSensor;
     protected MyDoubleAccumulatorSensor mDistanceSensor;
@@ -82,16 +82,16 @@ public class ANTBikeSpeedDevice extends MyANTDevice {
 
     @Override
     protected void setSpecificPcc(AntPluginPcc antPluginPcc) {
-        bikeSpeedDistancePcc = (AntPlusBikeSpeedDistancePcc) antPluginPcc;
+        rowSpeedDistancePcc = (AntPlusBikeSpeedDistancePcc) antPluginPcc;
     }
 
 
     @Override
     protected void subscribeSpecificEvents() {
-        if (bikeSpeedDistancePcc != null) {
+        if (rowSpeedDistancePcc != null) {
             myLog("subscribing specific events");
 
-            bikeSpeedDistancePcc.subscribeCalculatedSpeedEvent(new CalculatedSpeedReceiver(new BigDecimal(mCalibrationFactor)) {
+            rowSpeedDistancePcc.subscribeCalculatedSpeedEvent(new CalculatedSpeedReceiver(new BigDecimal(mCalibrationFactor)) {
                 @Override
                 public void onNewCalculatedSpeed(long estTimestamp, EnumSet<EventFlag> eventFlags, BigDecimal calculatedSpeed) {
                     myLog("onNewCalculatedSpeed:timeStamp=" + estTimestamp + ": " + calculatedSpeed.doubleValue());
@@ -101,7 +101,7 @@ public class ANTBikeSpeedDevice extends MyANTDevice {
                 }
             });
 
-            bikeSpeedDistancePcc.subscribeCalculatedAccumulatedDistanceEvent(new CalculatedAccumulatedDistanceReceiver(new BigDecimal(mCalibrationFactor)) {
+            rowSpeedDistancePcc.subscribeCalculatedAccumulatedDistanceEvent(new CalculatedAccumulatedDistanceReceiver(new BigDecimal(mCalibrationFactor)) {
                 @Override
                 public void onNewCalculatedAccumulatedDistance(long estTimestamp, EnumSet<EventFlag> eventFlags, BigDecimal calculatedAccumulatedDistance) {
                     if (calculatedAccumulatedDistance != null) {
@@ -119,7 +119,7 @@ public class ANTBikeSpeedDevice extends MyANTDevice {
 
     @Override
     protected void subscribeCommonEvents() {
-        onNewBikeSpdCadCommonPccFound(bikeSpeedDistancePcc);
+        onNewBikeSpdCadCommonPccFound(rowSpeedDistancePcc);
     }
 
 }

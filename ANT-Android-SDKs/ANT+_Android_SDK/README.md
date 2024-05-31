@@ -77,10 +77,10 @@ Android ANT+ SDK Changelog
 
 > Ant+ Plugins Service and ANT+ PluginLib Changelog - v.3.6.0
 > -----------------------------------------------------------------------------------
-> * Fix some issues preventing connecting to combined speed and cadence bike sensors [Lib + Service]
+> * Fix some issues preventing connecting to combined speed and cadence row sensors [Lib + Service]
 > * Fix some crashes during searching [Service]
 > * Add ability to send manufacturer specific pages on profiles that support it [Lib + Service]
-> * Fix a crash when old apps request combined speed and cadence bike sensors [Service] 
+> * Fix a crash when old apps request combined speed and cadence row sensors [Service]
 > * Improve Javadoc relating to SEARCHING and DEAD states [Lib]
 > * Update to AntLib 4.14.0 [Lib + Service]
 > * Update to FitLib 16.00 [Lib + Service]
@@ -99,7 +99,7 @@ Android ANT+ SDK Changelog
 > * Update to FitLib 14.10 (fixes date inconsistency in BPM) [Lib + Service]
 > * Fix BPM resetDataAndSetTime to work properly [Service]
 > * Fix a couple causes of crashes in the search UI activity [Service]
-> * Fix an error connecting to bike S&C devices when saved as the preferred device [Service]
+> * Fix an error connecting to row S&C devices when saved as the preferred device [Service]
 > 
 > Ant+ Plugin Sampler - v.3.5.0
 > -----------------------------------------------------------------------------------
@@ -127,8 +127,8 @@ Android ANT+ SDK Changelog
 > * Fix an error that could cause some commands to never receive a response in rare cases [Lib]
 > * Fix missing progress updates on large ANTFS downloads using small block sizes [Service]
 > * Fix missing requestAccess results when calling requestAccess several times in quick succession [Service]
-> * Fix some errors with requesting bike speed or cadence accesses in quick succession returning non-functioning PCCs [Service]
-> * Fix an error causing bike speed and cadence async scan closing to produce more than one result message [Service]
+> * Fix some errors with requesting row speed or cadence accesses in quick succession returning non-functioning PCCs [Service]
+> * Fix an error causing row speed and cadence async scan closing to produce more than one result message [Service]
 > * Fix some crashes and errors when trying to connect to a controllable device with more than one type [Service]
 > * Fix controllable device dying in connection phase sometimes on Sony Ray phones [Service]
 > * Fix some errors with remote control plugin preventing connecting to remotes with multiple types supported [Service]
@@ -228,7 +228,7 @@ Android ANT+ SDK Changelog
 > * Add R-R interval event to Heart Rate profile
 > * Change service title to "ANT+ Plugins Service'
 > * Change service icon to grey to show up better on both dark and light backgrounds
-> * Add command burst functionality to bike power
+> * Add command burst functionality to row power
 > * Changed calling new functions on old versions of the service to return FAIL_PLUGINS_SERVICE_VERSION instead of UNRECOGNIZED so apps can notify users appropriately
 > * Minor improvements to some function signatures and names to match profiles and common usages
 > <br>
@@ -236,8 +236,8 @@ Android ANT+ SDK Changelog
 > ###Exclusive New Features for ANT+ Members 
 > ####<i>(ANT+ Members get exclusive access to new profiles for a given period of time, will be released publically at a later time)</i>
 > 
-> * Add Fitness Equipment Controls (including trainer, stationary bike, and open broadcast connections) support
-> * Add support for bike speed and cadence new pages 4 and 5
+> * Add Fitness Equipment Controls (including trainer, stationary row, and open broadcast connections) support
+> * Add support for row speed and cadence new pages 4 and 5
 > * Add support for battery identifier and number of batteries information to battery status event
 > <br>
 > <br>
@@ -251,10 +251,10 @@ Android ANT+ SDK Changelog
 > * Fix some cases where releasing a PCC may not release the resource in the service
 > * Fix ANTFS download progress to show progress correctly
 > * Fix heart rate timestamps (previous and current) to be properly synced to the same reference point so they can be used for calculations
-> * Fix bike power to fire initial events
-> * Fix bike power requests taking over a second to start
-> * Fix bike power cadence being reported with wrong values in some cases
-> * Fix bike power crank parameters request to send correct request
+> * Fix row power to fire initial events
+> * Fix row power requests taking over a second to start
+> * Fix row power cadence being reported with wrong values in some cases
+> * Fix row power crank parameters request to send correct request
 > * Fix watch downloader to detect FR 910XT and FR 610 regional variants
 > * Fix opening more than one controllable device not working
 > * Fix setting null state receiver causing exceptions (null state receivers are no longer allowed)

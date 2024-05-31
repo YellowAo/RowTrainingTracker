@@ -565,7 +565,7 @@ public class WorkoutSummariesDatabaseManager {
 
             SQLiteDatabase db = getInstance().getOpenDatabase();
 
-            // get the first part, something like #bike2work, b2w, >> work ...
+            // get the first part, something like #row2work, b2w, >> work ...
             Cursor cursor = db.query(WorkoutSummaries.TABLE_WORKOUT_NAME_PATTERNS, // table
                     null,  // columns,
                     WorkoutSummaries.SPORT_ID + "=? AND " + WorkoutSummaries.START_LOCATION_NAME + "=? AND " + WorkoutSummaries.END_LOCATION_NAME + "=?", // selection,

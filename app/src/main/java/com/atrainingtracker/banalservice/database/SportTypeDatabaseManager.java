@@ -449,7 +449,7 @@ public class SportTypeDatabaseManager {
         WALK(BSportType.UNKNOWN, R.string.sport_type_walk, "walk", "Walk", "Walking", "Walking", "Walk"),
         RUN(BSportType.RUN, R.string.sport_type_run, "run", "Run", "Running", "Running", "Run"),
         MTB(BSportType.ROWING, R.string.sport_type_MTB, "mtb", "Ride", "Biking", "Mountain Biking", "MTB"),
-        ROWING(BSportType.ROWING, R.string.sport_type_bike, "bike", "Ride", "Biking", "Cycling", "Bike"),
+        ROWING(BSportType.ROWING, R.string.sport_type_row, "row", "Ride", "Biking", "Cycling", "Bike"),
         OTHER(BSportType.UNKNOWN, R.string.sport_type_other, "", "", "Other", "Other", "Other");
 
         // TODO: Runkeeper: Running, Cycling, Mountain Biking, Walking, Hiking, Downhill Skiing, Cross-Country Skiing, Snowboarding, Skating, Swimming, Wheelchair, Rowing, Elliptical, Other
@@ -564,7 +564,7 @@ public class SportTypeDatabaseManager {
         // WALK( BSportType.UNKNOWN,  R.string.sport_type_walk,  "walk",  "Walk",  "Walking",  "Walking",          "Walk"),
         // RUN(  BSportType.RUN,      R.string.sport_type_run,   "run",   "Run",   "Running",  "Running",          "Run"),
         // MTB(  BSportType.ROWING,     R.string.sport_type_MTB,   "mtb",   "Ride",  "Biking",   "Mountain Biking",  "Mountain Bike"),
-        // ROWING( BSportType.ROWING,     R.string.sport_type_bike,  "bike",  "Ride",  "Biking",   "Cycling",          "Bike"),
+        // ROWING( BSportType.ROWING,     R.string.sport_type_row,  "row",  "Ride",  "Biking",   "Cycling",          "Bike"),
         // OTHER(BSportType.UNKNOWN,  R.string.sport_type_other, "",      "",      "Other",    "Other",            "Other");
 
 
@@ -604,7 +604,7 @@ public class SportTypeDatabaseManager {
             id = db.insert(SportType.TABLE, null, cv);
             if (DEBUG) Log.i(TAG, "run gets id=" + id);
 
-            // ROWING( BSportType.ROWING,     R.string.sport_type_bike,  "bike",  "Ride",  "Biking",   "Cycling",          "Bike"),
+            // ROWING( BSportType.ROWING,     R.string.sport_type_row,  "row",  "Ride",  "Biking",   "Cycling",          "Bike"),
             cv.clear();
             cv.put(SportType.UI_NAME, TTSportType.ROWING.toString());
             cv.put(SportType.BASE_SPORT_TYPE, TTSportType.ROWING.getBSportType().name());
@@ -616,7 +616,7 @@ public class SportTypeDatabaseManager {
             cv.put(SportType.MIN_AVG_SPEED, TrainingApplication.getMaxMTBSpeed_mps());
             cv.put(SportType.MAX_AVG_SPEED, TrainingApplication.getMaxBikeSpeed_mps());
             id = db.insert(SportType.TABLE, null, cv);
-            if (DEBUG) Log.i(TAG, "bike gets id=" + id);
+            if (DEBUG) Log.i(TAG, "row gets id=" + id);
 
             // WALK( BSportType.UNKNOWN,  R.string.sport_type_walk,  "walk",  "Walk",  "Walking",  "Walking",          "Walk"),
             cv.clear();

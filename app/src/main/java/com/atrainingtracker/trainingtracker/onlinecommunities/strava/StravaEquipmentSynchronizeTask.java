@@ -40,7 +40,7 @@ public class StravaEquipmentSynchronizeTask extends AsyncTask<String, String, St
     protected static final String BEARER = "Bearer";
     protected static final String MESSAGE = "message";
     protected static final String AUTHORIZATION_ERROR = "Authorization Error";
-    protected static final String ROWINGS = "bikes";
+    protected static final String ROWINGS = "rows";
     protected static final String SHOES = "shoes";
     protected static final String ID = "id";
     protected static final String NAME = "name";
@@ -186,18 +186,18 @@ public class StravaEquipmentSynchronizeTask extends AsyncTask<String, String, St
             e1.printStackTrace();
         }
 
-        if (DEBUG) Log.d(TAG, "checking strava bikes");
-        JSONArray bikes;
+        if (DEBUG) Log.d(TAG, "checking strava rows");
+        JSONArray rows;
         try {
-            bikes = jsonObject.getJSONArray(ROWINGS);
-            for (int i = 0; i < bikes.length(); i++) {
-                JSONObject bike = bikes.getJSONObject(i);
-                String id = bike.getString(ID);
-                String name = bike.getString(NAME);
-                publishProgress(mContext.getString(R.string.got_bike, name));
+            rows = jsonObject.getJSONArray(ROWINGS);
+            for (int i = 0; i < rows.length(); i++) {
+                JSONObject row = rows.getJSONObject(i);
+                String id = row.getString(ID);
+                String name = row.getString(NAME);
+                publishProgress(mContext.getString(R.string.got_row, name));
 
                 int frameType = getStravaFrameType(id);
-                if (DEBUG) Log.d(TAG, "got frameType for bike " + name + ": " + frameType);
+                if (DEBUG) Log.d(TAG, "got frameType for row " + name + ": " + frameType);
 
                 values.clear();
                 values.put(EquipmentDbHelper.STRAVA_NAME, name);
@@ -214,7 +214,7 @@ public class StravaEquipmentSynchronizeTask extends AsyncTask<String, String, St
                     // do nothing?
                 }
                 if (updates < 1) {  // if nothing is updated, we create the entry
-                    if (DEBUG) Log.d(TAG, "creating bike: " + name);
+                    if (DEBUG) Log.d(TAG, "creating row: " + name);
                     values.put(EquipmentDbHelper.NAME, name);
                     values.put(EquipmentDbHelper.STRAVA_ID, id);
                     equipmentDb.insert(EquipmentDbHelper.EQUIPMENT, null, values);
@@ -231,10 +231,10 @@ public class StravaEquipmentSynchronizeTask extends AsyncTask<String, String, St
     }
 
 
-    protected int getStravaFrameType(String bikeId) {
+    protected int getStravaFrameType(String rowId) {
 
         HttpClient httpClient = new DefaultHttpClient();
-        HttpGet httpGet = new HttpGet(STRAVA_URL_GEAR + "/" + bikeId);
+        HttpGet httpGet = new HttpGet(STRAVA_URL_GEAR + "/" + rowId);
         // httpPost.addHeader(AUTHORIZATION, "Bearer " + TrainingApplication.getRunkeeperToken());
         httpGet.addHeader(AUTHORIZATION, BEARER + " " + StravaHelper.getRefreshedAccessToken());
 

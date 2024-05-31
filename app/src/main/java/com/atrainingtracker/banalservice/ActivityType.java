@@ -16,9 +16,9 @@ public enum ActivityType {
     GENERIC_HR(BSportType.UNKNOWN, R.string.activity_type_multisport_with_hr, R.string.activity_type_short_multisport_with_hr, false, true, false),
     RUN_SPEED(BSportType.RUN, R.string.activity_type_run_speed, R.string.activity_type_short_run_speed, false, true, false),
     RUN_SPEED_AND_CADENCE(BSportType.RUN, R.string.activity_type_run_speed_and_cadence, R.string.activity_type_short_run_speed_and_cadence, false, true, true),
-    ROWING_SPEED(BSportType.ROWING, R.string.activity_type_bike_speed, R.string.activity_type_short_bike_speed, false, true, false),
-    ROWING_SPEED_AND_CADENCE(BSportType.ROWING, R.string.activity_type_bike_speed_and_cadence, R.string.activity_type_short_bike_speed_and_cadence, false, true, true),
-    ROWING_POWER(BSportType.ROWING, R.string.activity_type_bike_power, R.string.activity_type_short_bike_power, true, true, true);
+    ROWING_SPEED(BSportType.ROWING, R.string.activity_type_row_speed, R.string.activity_type_short_row_speed, false, true, false),
+    ROWING_SPEED_AND_CADENCE(BSportType.ROWING, R.string.activity_type_row_speed_and_cadence, R.string.activity_type_short_row_speed_and_cadence, false, true, true),
+    ROWING_POWER(BSportType.ROWING, R.string.activity_type_row_power, R.string.activity_type_short_row_power, true, true, true);
 
 
     private final BSportType sportType;

@@ -79,7 +79,7 @@ public class SelectSportTypeDialog extends DialogFragment {
                 break;
 
             case ROWING:
-                bSportTypeName = getString(R.string.sport_type_bike);
+                bSportTypeName = getString(R.string.sport_type_row);
                 break;
 
             default:

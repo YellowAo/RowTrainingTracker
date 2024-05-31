@@ -889,10 +889,10 @@ public class EditWorkoutFragment extends Fragment {
         TextView tvCadence = getActivity().findViewById(R.id.tvCadence);
         switch (mBSportType) {
             case ROWING:
-                tvCadence.setText(R.string.cadence_bike_short);
-                rbTrainer.setText(R.string.trainer_bike);
-                tvEquipment.setText(R.string.equipment_type_bike);
-                ALL = getString(R.string.equipment_all_bikes);
+                tvCadence.setText(R.string.cadence_row_short);
+                rbTrainer.setText(R.string.trainer_row);
+                tvEquipment.setText(R.string.equipment_type_row);
+                ALL = getString(R.string.equipment_all_rows);
                 break;
 
             case RUN:
